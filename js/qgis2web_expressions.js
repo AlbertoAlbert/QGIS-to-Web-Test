@@ -757,27 +757,53 @@ function fnc_project_color(values, context) {
 
 
 
-function exp_POTEAUX_2rule0_eval_expression(context) {
-    // Stat_Numb = 0
+function exp_POTEAU_1rule0_eval_expression(context) {
+    // Status = 'Up'
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['Stat_Numb']  == 0);
+        return (feature.properties['Status']  == 'Up');
     } else {
-        return (feature['Stat_Numb']  == 0);
+        return (feature['Status']  == 'Up');
     }
 }
 
 
-function exp_POTEAUX_2rule1_eval_expression(context) {
-    // Stat_Numb = 1
+function exp_POTEAU_1rule1_eval_expression(context) {
+    // Status = 'Down'
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['Stat_Numb']  == 1);
+        return (feature.properties['Status']  == 'Down');
     } else {
-        return (feature['Stat_Numb']  == 1);
+        return (feature['Status']  == 'Down');
+    }
+}
+
+
+function exp_Elecrtic_Lines_2rule0_eval_expression(context) {
+    // Status = 'Up'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['Status']  == 'Up');
+    } else {
+        return (feature['Status']  == 'Up');
+    }
+}
+
+
+function exp_Elecrtic_Lines_2rule1_eval_expression(context) {
+    // Status = 'Down'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['Status']  == 'Down');
+    } else {
+        return (feature['Status']  == 'Down');
     }
 }
