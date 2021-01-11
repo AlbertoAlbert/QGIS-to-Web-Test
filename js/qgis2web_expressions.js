@@ -757,7 +757,7 @@ function fnc_project_color(values, context) {
 
 
 
-function exp_POTEAU_1rule0_eval_expression(context) {
+function exp_Electric_Tower_1rule0_eval_expression(context) {
     // Status = 'Up'
 
     var feature = context.feature;
@@ -770,7 +770,7 @@ function exp_POTEAU_1rule0_eval_expression(context) {
 }
 
 
-function exp_POTEAU_1rule1_eval_expression(context) {
+function exp_Electric_Tower_1rule1_eval_expression(context) {
     // Status = 'Down'
 
     var feature = context.feature;
@@ -783,27 +783,27 @@ function exp_POTEAU_1rule1_eval_expression(context) {
 }
 
 
-function exp_Elecrtic_Lines_2rule0_eval_expression(context) {
-    // Status = 'Up'
+function exp_Electric_Lines_2rule0_eval_expression(context) {
+    // Line_Statu = 'Up'
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['Status']  == 'Up');
+        return (feature.properties['Line_Statu']  == 'Up');
     } else {
-        return (feature['Status']  == 'Up');
+        return (feature['Line_Statu']  == 'Up');
     }
 }
 
 
-function exp_Elecrtic_Lines_2rule1_eval_expression(context) {
-    // Status = 'Down'
+function exp_Electric_Lines_2rule1_eval_expression(context) {
+    // Line_Statu = 'Down'
 
     var feature = context.feature;
     
     if (feature.properties) {
-        return (feature.properties['Status']  == 'Down');
+        return (feature.properties['Line_Statu']  == 'Down');
     } else {
-        return (feature['Status']  == 'Down');
+        return (feature['Line_Statu']  == 'Down');
     }
 }
