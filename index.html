@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device">
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="css/L.Control.Locate.min.css">
@@ -54,6 +54,7 @@
         }).fitBounds([[33.87937516628497,35.444887596148604],[34.10547583503498,35.870624224329276]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+            
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         L.control.locate({locateOptions: {maxZoom: 19}}).addTo(map);
         var bounds_group = new L.featureGroup([]);
@@ -220,7 +221,8 @@
         bounds_group.addLayer(layer_Electric_Lines_2);
         map.addLayer(layer_Electric_Lines_2);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'Electric_Lines<br /><table><tr><td style="text-align: center;"><img src="legend/Electric_Lines_2_LineisUp0.png" /></td><td>Line is Up</td></tr><tr><td style="text-align: center;"><img src="legend/Electric_Lines_2_LineisDown1.png" /></td><td>Line is Down</td></tr></table>': layer_Electric_Lines_2,'Electric_Tower<br /><table><tr><td style="text-align: center;"><img src="legend/Electric_Tower_1_TowerisFunctioning0.png" /></td><td>Tower is Functioning</td></tr><tr><td style="text-align: center;"><img src="legend/Electric_Tower_1_TowerisDown1.png" /></td><td>Tower is Down</td></tr></table>': cluster_Electric_Tower_1,"OpenStreetMap": layer_OpenStreetMap_0,},{collapsed:true}).addTo(map);
+        L.control.layers(baseMaps,{'Electric_Lines<br /><table><tr><td style="text-align: center;"><img src="legend/Electric_Lines_2_LineisUp0.png" /></td><td>Line is Up</td></tr><tr><td style="text-align: center;"><img src="legend/Electric_Lines_2_LineisDown1.png" /></td><td>Line is Down</td></tr></table>': layer_Electric_Lines_2,'Electric_Tower<br /><table><tr><td style="text-align: center;"><img src="legend/Electric_Tower_1_TowerisFunctioning0.png" /></td><td>Tower is Functioning</td></tr><tr><td style="text-align: center;"><img src="legend/Electric_Tower_1_TowerisDown1.png" /></td><td>Tower is Down</td></tr></table>': cluster_Electric_Tower_1,"OpenStreetMap": layer_OpenStreetMap_0,},{collapsed:false}).addTo(map);
+
         setBounds();
         </script>
     </body>
